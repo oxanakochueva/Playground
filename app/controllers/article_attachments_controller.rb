@@ -69,6 +69,6 @@ class ArticleAttachmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_attachment_params
-      params.require(:article_attachment).permit(:attachment_id, :int, :article_id, :int)
+      params.require(:article_attachment).permit(:attachment_id, :article_id)
     end
 end

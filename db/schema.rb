@@ -13,9 +13,8 @@
 ActiveRecord::Schema.define(version: 2018_11_03_153251) do
 
   create_table "article_attachments", force: :cascade do |t|
-    t.string "attachment_id"
-    t.string "int"
-    t.string "article_id"
+    t.integer "attachment_id"
+    t.integer "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,7 +29,6 @@ ActiveRecord::Schema.define(version: 2018_11_03_153251) do
 
   create_table "attachments", force: :cascade do |t|
     t.string "type"
-    t.string "string"
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -67,7 +65,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_153251) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
-    t.boolean "publishing"
+    t.boolean "published"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
